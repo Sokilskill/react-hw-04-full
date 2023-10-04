@@ -2,6 +2,8 @@ import { NavLink, Route, Routes } from 'react-router-dom';
 import HeaderTitle from './HeaderTitle/HeaderTitle';
 import Feedback from 'pages/Feedback';
 import Phonebook from 'pages/Phonebook';
+import TodoList from 'pages/TodoList';
+
 export const App = () => {
   return (
     <div>
@@ -23,8 +25,8 @@ export const App = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="ImageFinder">
-              <HeaderTitle text="Image Finder" />
+            <NavLink to="todoList">
+              <HeaderTitle text="Todo List" />
             </NavLink>
           </li>
         </ul>
@@ -34,7 +36,7 @@ export const App = () => {
         <Route path="/">
           <Route path="Feedback" element={<Feedback />}></Route>
           <Route path="Phonebook" element={<Phonebook />} />
-          <Route path="ImageFinder" element={<p> ImageFinder</p>} />
+          <Route path="todoList" element={<TodoList />} />
           <Route path="*" element={<p>NotFound</p>} />
         </Route>
       </Routes>
