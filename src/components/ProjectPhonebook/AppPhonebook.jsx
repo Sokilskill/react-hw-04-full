@@ -18,8 +18,6 @@ const AppPhonebook = () => {
   );
   const [timer, setTimer] = useState(3);
 
-  console.log('CONTACTS', CONTACTS);
-
   useEffect(() => {
     if (CONTACTS.length !== contacts.length) {
       setLocalStorage(JSON.parse(localStorage.getItem('CONTACTS')));
